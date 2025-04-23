@@ -13,6 +13,6 @@ router.get("/point-table", pointTable);
 router.get("/team", teamByTeamName);
 router.get("/fast-live-score", fastLiveScore);
 router.get("/live-Score", liveScore);
-router.get("/winners-teams", winnersTeams )
+router.get("/winners-teams", winnersTeams);
 
 export default router;

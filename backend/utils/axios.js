@@ -7,4 +7,13 @@ const instance = axios.create({
     }
 })
 
-export default instance;
+
+const predictMatchInstance = axios.create({
+    baseURL:process.env.BASE_URL_OF_IPL_PREDICT, 
+    headers:{
+        "Content-Type" : "application/json",
+    }
+})
+
+export { instance, predictMatchInstance};
+

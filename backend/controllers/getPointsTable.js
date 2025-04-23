@@ -1,4 +1,4 @@
-import instance from "../utils/axios.js";
+import {instance} from "../utils/axios.js";
 
 const pointTable = async (req, res) => {
     try {

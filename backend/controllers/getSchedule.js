@@ -1,4 +1,4 @@
-import instance from "../utils/axios.js";
+import {instance} from "../utils/axios.js";
 
 const getSchedule = async (req, res) => {
     try {

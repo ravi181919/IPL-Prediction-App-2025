@@ -1,4 +1,4 @@
-import instance from "../utils/axios.js";
+import {instance} from "../utils/axios.js";
 
 const fastLiveScore = async (req, res) => {
   try {

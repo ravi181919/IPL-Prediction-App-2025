@@ -1,4 +1,4 @@
-import instance from "../utils/axios.js";
+import {instance} from "../utils/axios.js";
 const teamByTeamName = async (req, res) => {
   try {
     const teamName = req.query.term;

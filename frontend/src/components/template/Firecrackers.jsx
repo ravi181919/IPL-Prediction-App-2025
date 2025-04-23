@@ -35,7 +35,7 @@ const Firecrackers = () => {
       scale: [0.7, 1.5], // Bubble expansion effect
       opacity: [1, 0], // Fade out
       rotate: () => anime.random(0, 360), // Random rotation
-      duration: 2500,
+      duration: 1500,
       easing: "easeOutExpo",
       delay: anime.stagger(5), // Stagger effect for better explosion
     });
@@ -49,7 +49,7 @@ const Firecrackers = () => {
   return (
     <div
       ref={fireworkRef}
-      className="absolute left-[0] border-0 mt-20 h-full rotate-[35]  flex justify-center items-end"
+      className="absolute left-[0] z-40 border-0 mt-20 h-full rotate-[35]  flex justify-center items-end"
     ></div>
   );
 };

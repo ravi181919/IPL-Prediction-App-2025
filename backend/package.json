@@ -1,16 +1,23 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a simple ipl predication application based or build on MERN.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "The ipl predication app",
+    "Match predication app",
+    "mern stack application"
+  ],
+  "author": "Ravi Kumar Gupta",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.8.4",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
   }

@@ -5,7 +5,7 @@ const Firecrackers = () => {
   const fireworkRef = useRef(null);
 
   useEffect(() => {
-    const numParticles = 50; // Number of bubbles
+    const numParticles = 50; 
     const colors = ["#ff0000", "#00ff00", "#0000ff", "#ff6600", "#ffff00"]; // Firecracker colors
 
     // Generate multiple particle elements dynamically

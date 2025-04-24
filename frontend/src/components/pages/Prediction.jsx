@@ -72,7 +72,6 @@ const Prediction = ({Predicte}) => {
           <h1></h1>
         </div>
         <div className="w-full flex items-end  justify-center ">
-          {/* <Firecrackers /> */}
           <button onClick={() => Predicte()} className=" py-3 px-6 bg-[#1155C5] rounded-md leading-none tracking-wider font-medium text-xs  ">
             Click me to Predict
           </button>

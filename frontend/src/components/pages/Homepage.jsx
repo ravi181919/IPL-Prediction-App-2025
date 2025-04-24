@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar.jsx";
 import Firstinnings from "./Firstinnings";
 import Secondinnings from "./Secondinnings.jsx";
@@ -6,8 +6,30 @@ import Prediction from "./Prediction";
 import Firecrackers from "../template/Firecrackers.jsx";
 import Card from "../template/Card.jsx";
 import Footer from "../template/Footer";
+import instance from "../../utils/axios.jsx";
 
 const Homepage = () => {
+  const [predictedData, setPredictedData] = useState([]);
+
+  const getIplData = async () => {
+    try {
+      const {data} = await instance.post('/predication', {
+        "batting_team": "Chennai Super Kings",
+        "bowling_team": "Delhi Capitals",
+        "city": "Bengaluru",
+        "total_runs": 120,
+        "current_score": 110,
+        "wickets": 6,
+        "overs_completed": 12.0
+      });
+      if (data.data) {
+        setPredictedData(data.data)
+      }
+    } catch (error) {
+      console.log('Error Homepage :: ' + error.message);
+    }
+  } 
+
   document.documentElement.classList.add("dark");
   const [predictionIs, setPredicationIs] = useState(false);
   const Predicte = (e) => {
@@ -18,6 +40,10 @@ const Homepage = () => {
       setPredicationIs(false);
     }, 5000);
   }
+
+  useEffect(() => {
+    getIplData();
+  }, [])
   return (
     <div className="w-full relative overflow-hidden h-[100vh] dark:bg-black/80 dark:text-white/85 flex">
       <Sidebar />
